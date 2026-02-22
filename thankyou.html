@@ -1,44 +1,79 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank You</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ধন্যবাদ</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.hero {
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.cta-btn {
+display: inline-block;
+padding: 16px 30px;
+font-size: 18px;
+background: #25D366;
+color: #fff;
+border-radius: 40px;
+text-decoration: none;
+margin-top: 20px;
+}
+</style>
+
 </head>
 <body>
 
 <section class="hero">
-  <div class="overlay"></div>
+<div class="overlay"></div>
 
-  <div class="content">
+<div class="content">
+<h1>🎉 ধন্যবাদ!</h1>
 
-    <h1>🎉 ধন্যবাদ!</h1>
-
-    <p class="sub">
-      আপনার সিট রিজার্ভ করার জন্য
-      নিচের বাটনে ক্লিক করে WhatsApp-এ জয়েন করুন 👇
-    </p>
-
-    <a href="https://wa.me/917001225159?text=আমি%20Training%20Join%20করতে%20চাই"
-       target="_blank"
-       class="cta-btn">
-       WhatsApp এ Join করুন
-    </a>
-
-    
 <p class="sub">
-      আমাদের Call / Whatsapp করুন-7001225159 👈
+আপনার সিট রিজার্ভ করার জন্য
+নিচের বাটনে ক্লিক করে WhatsApp-এ জয়েন করুন 👇
 </p>
 
-    <div>
-    <a href="index.html" class="cta-btn">
-       Home
-    </a>
-    </div>
-      
-  </div>
+<a id="waButton"
+class="cta-btn"
+target="_blank">
+এখনই WhatsApp এ Join করুন
+</a>
+
+<p class="sub">
+আমাদের Call / Whatsapp করুন-7001225159 👈
+</p>
+
+<div>
+<a href="index.html" class="cta-btn">
+Home
+</a>
+</div>
+
+</div>
 </section>
+
+<script>
+// Proper mobile compatible WhatsApp link
+const message = "আমি Market Reversal Calculation Method শিখতে চাই";
+const encodedMessage = encodeURIComponent(message);
+
+const whatsappURL = "https://api.whatsapp.com/send?phone=917001225159&text=" + encodedMessage;
+
+document.getElementById("waButton").href = whatsappURL;
+
+// Optional: Delay redirect only if not inside Facebook browser
+setTimeout(function() {
+window.location.href = whatsappURL;
+}, 5000);
+</script>
 
 </body>
 </html>

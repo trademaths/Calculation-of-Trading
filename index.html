@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Reversal Calculation Method</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">TradeMaths</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="content">
+
+    <h2 class="animated">
+      Candlestick, Support-Resistance শিখেও লাভ হচ্ছে না?
+    </h2>
+
+    <h1>একদম ফ্রিতে শিখুন ট্রেডিং ক্যালকুলেশন</h1>
+
+    <p class="sub">
+      Market Reversal Calculation Method —
+      Exact Reversal Point নির্ধারণ করুন।
+    </p>
+
+    <div class="countdown">
+      ⏳ অফার শেষ হবে:
+      <span id="timer">10:00</span>
+    </div>
+
+    <a href="thankyou.html" class="cta-btn">
+       আমি শিখতে চাই
+    </a>
+
+    <p class="trust">✔ Limited Seats | ✔ 100% Free</p>
+
+  </div>
+</section>
+
+<script>
+  let duration = 600;
+  let timer = duration, minutes, seconds;
+  let display = document.getElementById('timer');
+
+  setInterval(function () {
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds;
+
+      if (--timer < 0) {
+          timer = 0;
+      }
+  }, 1000);
+</script>
+
+</body>
+</html>
